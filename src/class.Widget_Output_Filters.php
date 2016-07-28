@@ -32,9 +32,11 @@ class Widget_Output_Filters {
 
 		global $wp_registered_widgets;
 		$current_widget_id = $sidebar_params[0]['widget_id'];
+		if ( isset( $wp_registered_widgets[ $current_widget_id ]['callback'][0]->id_base ) ) {
 
-		$wp_registered_widgets[ $current_widget_id ]['original_callback'] = $wp_registered_widgets[ $current_widget_id ]['callback'];
-		$wp_registered_widgets[ $current_widget_id ]['callback'] = array( $this, 'display_widget' );
+			$wp_registered_widgets[ $current_widget_id ]['original_callback'] = $wp_registered_widgets[ $current_widget_id ]['callback'];
+			$wp_registered_widgets[ $current_widget_id ]['callback'] = array( $this, 'display_widget' );
+		}
 
 		return $sidebar_params;
 	}

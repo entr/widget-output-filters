@@ -1,10 +1,10 @@
 === Widget Output Filters ===
-Contributors:      philip.newcomer
+Contributors:      philip.newcomer entr
 Donate Link:       https://philipnewcomer.net/donate/
 Tags:              widget, widgets, filter, filters, output, html
 Requires at least: 3.0
 Tested up to:      4.4
-Stable tag:        1.1
+Stable tag:        1.1.1
 License:           GPLv2 or later
 
 Enables developers to filter the output of any WordPress widget.
@@ -25,6 +25,8 @@ If you know what WordPress filters are, you probably know how to install a plugi
 
 == Changelog ==
 
+= 1.1.1 =
+* Only process widget if callback not already altered by another plugin
 = 1.1 =
 * Refactor code
 * Add Composer support
